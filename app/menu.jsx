@@ -16,7 +16,7 @@ export default function MenuScreen() {
 
     return (
         <ImageBackground
-            source={require('@/assets/images/image.png')} // Replace with your image path
+            source={require('@/assets/images/background.png')} // Replace with your image path
             style={styles.backgroundImage}
             resizeMode="cover"
         >
