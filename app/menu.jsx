@@ -79,9 +79,9 @@ function createStyles(theme, colorScheme) {
         row: {
             flexDirection: 'row',
             width: '100%',
-            maxWidth: 600,
-            height: 110,
-            marginBottom: 10,
+            maxWidth: 500,
+            height: 158,
+            marginBottom: 15,
             borderStyle: 'solid',
             borderColor: '#1E90FF', // Blue border color for both light and dark modes
             borderWidth: 1,
@@ -105,8 +105,8 @@ function createStyles(theme, colorScheme) {
             color: theme.text, // Ensure the text color is correct based on theme
         },
         menuImage: {
-            width: 100,
-            height: 100,
+            width: 120,
+            height: 155,
         },
     });
 }
