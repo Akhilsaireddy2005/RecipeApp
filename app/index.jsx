@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet, ImageBackground, Pressable } from 'react-native';
 import { Link } from 'expo-router';
 
-import icedCoffeeImg from "@/assets/images/mainpage1.png";
+import mainpage from "@/assets/images/mainpage1.png";
 
 const app = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={icedCoffeeImg}
+        source={mainpage}
         resizeMode="cover"
         style={styles.image}
       >
