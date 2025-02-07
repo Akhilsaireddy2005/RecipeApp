@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    justifyContent: 'center', // Center content vertically
-    alignItems: 'center', // Center content horizontally
+    justifyContent: 'center', 
+    alignItems: 'center', 
     width: '100%',
     height: '100%',
   },
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'rgba(0,0,0,0.75)',
     padding: 6,
-    marginBottom: 20, // Adjusted to give space between buttons
+    marginBottom: 20, 
   },
   buttonText: {
     color: 'white',
