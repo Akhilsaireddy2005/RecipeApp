@@ -32,6 +32,7 @@ export default function RootLayout() {
       <Stack>
       <Stack.Screen name="index" options={{ headerShown: false, title: 'Home' }} />
       <Stack.Screen name="menu" options={{ headerShown: true, title: 'Menu', headerTitle: 'Recipe Menu' }} />
+      <Stack.Screen name="snacks" options={{ headerShown: true, title: 'Snacks' , headerTitle: 'Snacks Menu'}} />
       <Stack.Screen name="contact" options={{ headerShown: true, title: 'Contact', headerTitle: 'Contact Us' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
