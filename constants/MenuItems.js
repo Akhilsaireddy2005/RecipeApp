@@ -21,31 +21,21 @@ export const MENU_ITEMS = [
     },
     {
         "id": 5,
-        "title": "French Fry",
-        "description": "French fries are crispy, golden-brown strips of potato, deep-fried to perfection and often served as a snack or side dish.",
-    },
-    {
-        "id": 6,
         "title": "Pulao Recipe",
         "description": "Pulao is a fragrant rice dish cooked with aromatic spices, vegetables, and offering a mild and flavorful taste.",
     },
     {
-        "id": 7,
-        "title": "Pasta Recipe",
-        "description": "Pasta is a versatile Italian dish made from durum wheat, typically served with a variety of sauces like marinara, Alfredo, or pesto.",
-    },
-    {
-        "id": 8,
+        "id": 6,
         "title": "Vegetable Soup",
         "description": "Vegetable soup is a nourishing dish made with a variety of vegetables simmered in broth, providing a healthy and comforting meal.",
     },
     {
-        "id": 9,
+        "id": 7,
         "title": "Fish Curry",
         "description": "Cold water brewed Fish curry is a flavorful dish made with tender fish cooked in a spiced, aromatic gravy, often with coconut milk.",
     },
     {
-        "id": 10,
+        "id": 8,
         "title": "Paneer Curry",
         "description": "Espresso over ice Paneer curry is a rich, creamy dish made with cubes of paneer simmered in a spiced, flavorful sauce, popular in Indian cuisine.",
     }
