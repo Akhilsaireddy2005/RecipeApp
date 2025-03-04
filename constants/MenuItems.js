@@ -9,6 +9,7 @@ export const MENU_ITEMS = [
         "id": 2,
         "title": "Tomato Curry",
         "description": "A tomato is a nutrient-packed, tangy fruit widely used in cooking, known for its versatility and rich flavor.",
+        "route": "/recipes/tomato-curry"
     },
     {
         "id": 3,
