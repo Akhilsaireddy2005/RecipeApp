@@ -139,7 +139,7 @@ export default function PotatoCurryRecipe() {
                     </View>
                     <View style={styles.macroTextContainer}>
                       <Text style={styles.macroLabel}>Per Serving</Text>
-                      <Text style={styles.macroSubtext}>Based on 4 servings</Text>
+                      <Text style={styles.macroValue}> 4 </Text>
                     </View>
                   </View>
                 </View>
