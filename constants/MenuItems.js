@@ -3,7 +3,7 @@ export const MENU_ITEMS = [
         "id": 1,
         "title": "Potato Curry",
         "description": "A potato is a nutrient-rich, starchy tuber commonly used in cooking for its versatility and mild flavor.",
-        "route": "potato-curry"
+        "route": "/recipes/potato-curry"
     },
     {
         "id": 2,
