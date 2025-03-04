@@ -1,85 +1,80 @@
-import { View, Text, StyleSheet, ImageBackground, Pressable } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { Link } from 'expo-router';
 
-import mainpage from "@/assets/images/mainpage1.png";
-
-const app = () => {
+export default function LandingPage() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={mainpage}
+        source={require('../assets/image.png')}
+        style={styles.backgroundImage}
         resizeMode="cover"
-        style={styles.image}
       >
-        {/* Optional Title */}
-        {/* <Text style={styles.title}>Coffee Shop</Text> */}
-
-        <Link href="/menu" style={{ marginHorizontal: 'auto' }} asChild>
-          <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Our Menu</Text>
-          </Pressable>
-        </Link>
-        <Link href="/snacks" style={{ marginHorizontal: 'auto' }} asChild>
-          <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Snacks</Text>
-          </Pressable>
-        </Link>
-
-        <Link href="/contact" style={{ marginHorizontal: 'auto' }} asChild>
-          <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Contact Us</Text>
-          </Pressable>
-        </Link>
-
+        <View style={styles.overlay}>
+          <Text style={styles.title}>Welcome to Our App</Text>
+          <Text style={styles.subtitle}>Discover Amazing Features</Text>
+          
+          <View style={styles.buttonContainer}>
+            <Link href="/home" asChild>
+              <TouchableOpacity style={styles.primaryButton}>
+                <Text style={styles.buttonText}>Get Started</Text>
+              </TouchableOpacity>
+            </Link>
+          </View>
+        </View>
       </ImageBackground>
     </View>
   );
-};
-
-export default app;
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  image: {
+  backgroundImage: {
     flex: 1,
-    justifyContent: 'center', 
-    alignItems: 'center', 
     width: '100%',
     height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  overlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
   },
   title: {
-    color: 'white',
-    fontSize: 42,
+    fontSize: 32,
     fontWeight: 'bold',
+    color: '#ffffff',
+    marginBottom: 10,
     textAlign: 'center',
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    marginBottom: 120,
   },
-  link: {
-    color: 'white',
-    fontSize: 42,
-    fontWeight: 'bold',
+  subtitle: {
+    fontSize: 18,
+    color: '#ffffff',
+    marginBottom: 30,
     textAlign: 'center',
-    textDecorationLine: 'underline',
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    padding: 4,
   },
-  button: {
-    height: 60,
-    width: 150,
-    borderRadius: 20,
-    justifyContent: 'center',
-    backgroundColor: 'rgba(0,0,0,0.75)',
-    padding: 6,
-    marginBottom: 20, 
+  buttonContainer: {
+    alignItems: 'center',
+  },
+  primaryButton: {
+    backgroundColor: '#007AFF',
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    borderRadius: 25,
+    elevation: 3,
+    minWidth: 200,
+    alignItems: 'center',
   },
   buttonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    padding: 4,
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: '600',
   },
-});
+}); 
