@@ -1,4 +1,5 @@
-import { StyleSheet, Appearance, Platform, SafeAreaView, ScrollView, FlatList, View, Text, Image, ImageBackground } from "react-native";
+import { StyleSheet, Appearance, Platform, SafeAreaView, ScrollView, FlatList, View, Text, Image, ImageBackground, TouchableOpacity } from "react-native";
+import { Link } from 'expo-router';
 
 import { Colors } from '@/constants/Colors';
 import { MENU_ITEMS } from '@/constants/MenuItems';
@@ -13,6 +14,40 @@ export default function MenuScreen() {
 
     const separatorComp = <View style={styles.separator} />;
     const footerComp = <Text style={{ color: theme.text }}>End of Menu</Text>;
+
+    const renderMenuItem = ({ item }) => (
+        item.route ? (
+            <Link href={item.route} asChild>
+                <TouchableOpacity>
+                    <View style={styles.row}>
+                        <View style={styles.menuTextRow}>
+                            <Text style={[styles.menuItemTitle, styles.menuItemText]}>
+                                {item.title}
+                            </Text>
+                            <Text style={styles.menuItemText}>{item.description}</Text>
+                        </View>
+                        <Image
+                            source={MENU_IMAGES[item.id - 1]}
+                            style={styles.menuImage}
+                        />
+                    </View>
+                </TouchableOpacity>
+            </Link>
+        ) : (
+            <View style={styles.row}>
+                <View style={styles.menuTextRow}>
+                    <Text style={[styles.menuItemTitle, styles.menuItemText]}>
+                        {item.title}
+                    </Text>
+                    <Text style={styles.menuItemText}>{item.description}</Text>
+                </View>
+                <Image
+                    source={MENU_IMAGES[item.id - 1]}
+                    style={styles.menuImage}
+                />
+            </View>
+        )
+    );
 
     return (
         <ImageBackground
@@ -30,20 +65,7 @@ export default function MenuScreen() {
                     ListFooterComponent={footerComp}
                     ListFooterComponentStyle={styles.footerComp}
                     ListEmptyComponent={<Text>No items</Text>}
-                    renderItem={({ item }) => (
-                        <View style={styles.row}>
-                            <View style={styles.menuTextRow}>
-                                <Text style={[styles.menuItemTitle, styles.menuItemText]}>
-                                    {item.title}
-                                </Text>
-                                <Text style={styles.menuItemText}>{item.description}</Text>
-                            </View>
-                            <Image
-                                source={MENU_IMAGES[item.id - 1]}
-                                style={styles.menuImage}
-                            />
-                        </View>
-                    )}
+                    renderItem={renderMenuItem}
                 />
             </Container>
         </ImageBackground>
