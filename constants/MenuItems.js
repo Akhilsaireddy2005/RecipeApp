@@ -15,6 +15,7 @@ export const MENU_ITEMS = [
         "id": 3,
         "title": "Chicken Biryani",
         "description": "Chicken biryani is a flavorful, aromatic rice dish made with spiced chicken, basmati rice, and a blend of herbs, popular in South Asian cuisine.",
+        "route": "/recipes/chicken-biryani"
     },
     {
         "id": 4,
