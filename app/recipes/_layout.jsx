@@ -25,6 +25,13 @@ export default function RecipesLayout() {
         }}
       />
       <Stack.Screen
+        name="chicken-curry"
+        options={{
+          headerShown: true,
+          title: 'Chicken Curry',
+        }}
+      />
+      <Stack.Screen
         name="potato-curry"
         options={{
           headerShown: true,

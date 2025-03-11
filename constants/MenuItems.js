@@ -21,6 +21,7 @@ export const MENU_ITEMS = [
         "id": 4,
         "title": "Chicken Curry",
         "description": "Chicken curry is a flavorful dish made with tender chicken simmered in a rich, aromatic sauce of spices, herbs, and sometimes tomatoes.",
+        "route": "/recipes/chicken-curry"
     },
     {
         "id": 5,
