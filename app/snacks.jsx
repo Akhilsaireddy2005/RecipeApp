@@ -1,4 +1,5 @@
-import { StyleSheet, Appearance, Platform, SafeAreaView, ScrollView, FlatList, View, Text, Image, ImageBackground } from "react-native";
+import { StyleSheet, Appearance, Platform, SafeAreaView, ScrollView, FlatList, View, Text, Image, ImageBackground, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
 
 import { Colors } from '@/constants/Colors';
 import { Snacks_ITEMS } from '@/constants/SnacksItems';
@@ -7,12 +8,19 @@ import Snacks_IMAGES from '@/constants/SnacksImages';
 export default function SnacksScreen() {
     const colorScheme = Appearance.getColorScheme();
     const theme = colorScheme === 'dark' ? Colors.dark : Colors.light;
+    const router = useRouter();
 
     const styles = createStyles(theme, colorScheme);
     const Container = Platform.OS === 'web' ? ScrollView : SafeAreaView;
 
     const separatorComp = <View style={styles.separator} />;
     const footerComp = <Text style={{ color: theme.text }}>End of Snacks</Text>;
+
+    const handleItemPress = (item) => {
+        if (item.route) {
+            router.push(item.route);
+        }
+    };
 
     return (
         <ImageBackground
@@ -31,7 +39,11 @@ export default function SnacksScreen() {
                     ListFooterComponentStyle={styles.footerComp}
                     ListEmptyComponent={<Text>No items</Text>}
                     renderItem={({ item }) => (
-                        <View style={styles.row}>
+                        <TouchableOpacity 
+                            style={styles.row}
+                            onPress={() => handleItemPress(item)}
+                            activeOpacity={0.7}
+                        >
                             <View style={styles.snacksTextRow}>
                                 <Text style={[styles.snacksItemTitle, styles.snacksItemText]}>
                                     {item.title}
@@ -42,7 +54,7 @@ export default function SnacksScreen() {
                                 source={Snacks_IMAGES[item.id - 1]}
                                 style={styles.snacksImage}
                             />
-                        </View>
+                        </TouchableOpacity>
                     )}
                 />
             </Container>
