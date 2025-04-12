@@ -27,20 +27,18 @@ export const MENU_ITEMS = [
         "id": 5,
         "title": "Pulao Recipe",
         "description": "Pulao is a fragrant rice dish cooked with aromatic spices, vegetables, and offering a mild and flavorful taste.",
+        "route": "/recipes/pulao"
     },
     {
         "id": 6,
-        "title": "Vegetable Soup",
-        "description": "Vegetable soup is a nourishing dish made with a variety of vegetables simmered in broth, providing a healthy and comforting meal.",
+        "title": "Fish Curry",
+        "description": "Cold water brewed Fish curry is a flavorful dish made with tender fish cooked in a spiced, aromatic gravy, often with coconut milk.",
+        "route": "/recipes/fish-curry"
     },
     {
         "id": 7,
-        "title": "Fish Curry",
-        "description": "Cold water brewed Fish curry is a flavorful dish made with tender fish cooked in a spiced, aromatic gravy, often with coconut milk.",
-    },
-    {
-        "id": 8,
         "title": "Paneer Curry",
         "description": "Espresso over ice Paneer curry is a rich, creamy dish made with cubes of paneer simmered in a spiced, flavorful sauce, popular in Indian cuisine.",
+        "route": "/recipes/paneer-curry"
     }
 ]

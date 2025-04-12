@@ -45,6 +45,34 @@ export default function RecipesLayout() {
           title: 'Tomato Curry',
         }}
       />
+      <Stack.Screen
+        name="pulao"
+        options={{
+          headerShown: true,
+          title: 'Pulao',
+        }}
+      />
+      <Stack.Screen
+        name="fish-curry"
+        options={{
+          headerShown: true,
+          title: 'Fish Curry',
+        }}
+      />
+      <Stack.Screen
+        name="paneer-curry"
+        options={{
+          headerShown: true,
+          title: 'Paneer Curry',
+        }}
+      />
+      <Stack.Screen
+        name="pizza"
+        options={{
+          headerShown: true,
+          title: 'Pizza',
+        }}
+      />
     </Stack>
   );
 } 
